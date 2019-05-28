@@ -29,7 +29,7 @@ export const getTypes = (
         | ObjectWithType[]
 
 export const createPlugin = (
-    fn: (arg: Schema, documents: Types.DocumentFile[], config: {}) => object
+    fn: (arg: Schema, documents: Types.DocumentFile[], config: {}) => any
 ) => (schema: GraphQLSchema, documents: Types.DocumentFile[], config: {}) => {
     const printedSchema = printSchemaWithDirectives(schema)
     const astNode = parse(printedSchema)
