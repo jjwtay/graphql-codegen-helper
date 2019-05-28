@@ -1,7 +1,13 @@
 # graphql-codegen-helper
 Graphql Codengen helper functions to quickly build plugins.
 
-## How to create a plugin. Simple Example to create a plugin that prettifies a graphql schema to human readable javascript object.
+## Basic Usage
+
+Creates a graphql-codegen plugin based off human readable Javascript Object interpretation of the graphql schema.
+
+    const plugin = createPlugin(schemaObject => // do whatever you wish with the schema object and return whatever you wish to generated as string)
+
+## Example: How to create a plugin. Simple Example to create a plugin that prettifies a graphql schema to human readable javascript object.
 
 *With this typescript plugin file*
 
@@ -97,6 +103,13 @@ Graphql Codengen helper functions to quickly build plugins.
         unions: {},
         interfaces: {}
     };
+
+## Supports
+    Objects
+    Fields
+    Unions
+    Directives (must supply .graphql file(s) for your plugin)
+
 
 ## License
 
