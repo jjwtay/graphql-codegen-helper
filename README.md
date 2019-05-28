@@ -50,52 +50,52 @@ Graphql Codengen helper functions to quickly build plugins.
 *I will receive this js output from my new plugin.*
 
     export default {
-    types: {
-        Author: {
-        name: "Author",
-        fields: {
-            name: {
-            isNullable: false,
-            isList: false,
-            directives: {},
-            type: "String"
+        types: {
+            Author: {
+                name: "Author",
+                fields: {
+                    name: {
+                        isNullable: false,
+                        isList: false,
+                        directives: {},
+                        type: "String"
+                    },
+                    Books: {
+                        isNullable: true,
+                        isList: true,
+                        directives: {},
+                        type: "Book"
+                    }
+                },
+                directives: {
+                    Foo: {}
+                },
+                interfaces: []
             },
-            Books: {
-            isNullable: true,
-            isList: true,
-            directives: {},
-            type: "Book"
+            Book: {
+                name: "Book",
+                fields: {
+                    title: {
+                        isNullable: false,
+                        isList: false,
+                        directives: {},
+                        type: "String"
+                    },
+                    Authors: {
+                        isNullable: false,
+                        isList: false,
+                        directives: {},
+                        type: "Author"
+                    }
+                },
+                directives: {
+                    Bar: {}
+                },
+                interfaces: []
             }
         },
-        directives: {
-            Foo: {}
-        },
-        interfaces: []
-        },
-        Book: {
-        name: "Book",
-        fields: {
-            title: {
-            isNullable: false,
-            isList: false,
-            directives: {},
-            type: "String"
-            },
-            Authors: {
-            isNullable: false,
-            isList: false,
-            directives: {},
-            type: "Author"
-            }
-        },
-        directives: {
-            Bar: {}
-        },
-        interfaces: []
-        }
-    },
-    unions: {},
-    interfaces: {}
+        unions: {},
+        interfaces: {}
     };
 
 ## License
