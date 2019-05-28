@@ -36,7 +36,7 @@ Graphql Codengen helper functions to quickly build plugins.
         Authors: [Author]!
     }
 
-*And run "npx graphql-codegen" with this graphql-codegen config file*
+*And run "npx graphql-codegen" with this graphql-codegen config file after compiling with "tsc -m esnext --outDir dist/esnext && tsc -m commonjs --outDir dist/commonjs". Note naming convention here just example not hardwired.*
 
     schema: testgen.graphql
     overwrite: true
