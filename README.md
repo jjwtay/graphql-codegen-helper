@@ -9,11 +9,12 @@ Graphql Codengen helper functions to quickly build plugins.
     import { Types, PluginFunction, PluginValidateFn } from '@graphql-codegen/plugin-helpers';
     import { readFileSync } from 'fs'
 
+    /* graphql-codegen plugin. */
     export const plugin = createPlugin(jsObj => `export default ${JSON.stringify(jsObj, null, 4)}`)
 
     const directives = readFileSync('directives.graphql')
 
-    /
+    /* extra directives my library "needs" to run */
     exports.addToSchema = [
         directives, // other optional directives needed for your plugin
     ].join('\n')
